@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-if&v-else&v-show实例</title>
+		<script type="text/javascript" src="../assets/js/vue.js"></script>
+	</head>
+	<body>
+		<h1>v-if&v-else&v-show实例</h1>
+		<hr/>
+		<div id="app">
+			<div v-if="islogin">你好，hello!</div>
+			<div v-else>请登录！</div>
+			<div v-show="islogin">你好，hello!</div>
+		</div>
+
+		<!--
+		v-if 和v-show的区别：
+		v-if： 判断是否加载，可以减轻服务器的压力，在需要时加载。
+		v-show：调整css dispaly属性，可以使客户端操作更加流畅。
+		-->
+		<script type="text/javascript">
+			var app = new Vue({
+				el:'#app',
+				data:{
+					islogin:true
+				}
+
+			})
+		</script>
+	</body>
+</html>
